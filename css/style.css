@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+    font-size: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.logo {
+    width: unset;
+    padding: 6%;
+
+}
+
+.slogan {
+    text-align: center;
+}
+
+.light, .bold {
+    display: inline;
+    font-size: 3rem;
+}
+
+.light {
+    font-weight: 300;
+    color: var(--Gray);
+}
+
+.bold{
+    font-weight: 700;
+    
+}
+
+h2 {
+    font-size: 0.9rem;
+    margin-top: 4%;
+}
+
+.emailBar {
+    width: 100%;
+    display: flex;
+    margin-top: 4%;
+}
+
+.email, button {
+    border-radius: 30px;
+    padding: 18px;
+    margin:  10px;
+}
+
+.email {
+    border: 1px solid var(--Pale-Blue);
+}
+
+::placeholder {
+    color: var(--Pale-Blue);
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+button {
+    border: none;
+    background-color: var(--Blue);
+    color: white;
+    box-shadow: 5px, 5px, 5px, var(--Pale-Blue);
+    width: 40%;
+}
+
+button:hover {
+    background-color: var(--Pale-Blue);
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 0.5rem;
+    padding-left: 30px;
+}
+
+.illustration {
+    margin-top: 6%;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fab {
+    /* padding: 8px; */
+    color: var(--Blue);
+    width: unset;
+    margin-top: 5px;
+}
+
+.socials a {
+    width: unset;
+    margin: 5px;
+    border: 1px solid var(--Pale-Blue);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.socials a:hover {
+    background-color: var(--Blue);
+}
+
+.fab:hover {
+    background-color: var(--Blue);
+    color: white;
+}
+
+.social-button:hover{
+    
+}
+
+
+.copy {
+    font-size: 0.5rem;
+    color: var(--Gray);
+    text-align: center;
+    margin-top: 20px;
+}
