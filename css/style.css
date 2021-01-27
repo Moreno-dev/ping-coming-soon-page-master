@@ -15,7 +15,14 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    box-sizing: border-box;
 }
+
+*:focus {
+    outline: 0 !important;
+}
+
+
 
 body {
     display: flex;
@@ -28,7 +35,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     box-sizing: border-box;
-    width: 50%;
+    width: 720px;
 }
 
 .logo {
@@ -39,11 +46,12 @@ body {
 
 .slogan {
     text-align: center;
+    font-size: 3rem;
 }
 
 .light, .bold {
     display: inline;
-    font-size: 3rem;
+    
 }
 
 .light {
@@ -62,15 +70,13 @@ h2 {
 }
 
 .emailBar {
-    width: 100%;
     display: flex;
     margin-top: 4%;
 }
 
-.email, button {
+.email, .notify-me-btn {
     border-radius: 30px;
-    padding: 18px;
-    margin:  10px;
+    padding: 18px;  
 }
 
 .email {
@@ -79,20 +85,21 @@ h2 {
 
 ::placeholder {
     color: var(--Pale-Blue);
-    font-family: 'Libre Franklin', sans-serif;
 }
 
-button {
-    border: none;
+.notify-me-btn {
+    border: 1px solid var(--Blue);
     background-color: var(--Blue);
     color: white;
     box-shadow: 5px, 5px, 5px, var(--Pale-Blue);
     width: 40%;
+    cursor: pointer;
 }
 
-button:hover {
+.notify-me-btn:hover {
     background-color: var(--Pale-Blue);
 }
+
 
 .error-message {
     display: none;
@@ -137,14 +144,47 @@ button:hover {
     color: white;
 }
 
-.social-button:hover{
-    
-}
-
-
 .copy {
     font-size: 0.5rem;
     color: var(--Gray);
     text-align: center;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .slogan {
+        font-size: 1.125rem;
+    }
+
+    .slogan h2 {
+        font-size: 0.6rem;
+    }
+
+    .emailBar {
+        flex-direction: column;
+    }
+
+    .notify-me-btn {
+        width: unset;
+        margin-top: 10px;
+    }
+
+}
+
+
+@media screen and (min-width: 960px) {
+
+    .notify-me-btn {
+        margin-left: 20px;
+    }
+
 }
